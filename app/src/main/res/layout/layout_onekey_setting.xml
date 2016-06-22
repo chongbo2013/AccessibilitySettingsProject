@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+              android:layout_width = "match_parent"
+              android:layout_height = "match_parent"
+              android:orientation = "vertical"
+              android:background = "@drawable/home_img_bg" >
+
+
+	<!--<RelativeLayout-->
+			<!--android:id = "@+id/layout_locker"-->
+			<!--android:layout_width = "match_parent"-->
+			<!--android:layout_height = "wrap_content"-->
+			<!--android:layout_marginBottom = "@dimen/layout_margin_8dp"-->
+			<!--android:layout_marginLeft = "@dimen/layout_margin_16dp"-->
+			<!--android:layout_marginRight = "@dimen/layout_margin_16dp"-->
+			<!--android:layout_marginTop = "@dimen/layout_margin_8dp" >-->
+
+		<!--<TextView-->
+				<!--style = "@style/normal_list_text_style"-->
+				<!--android:layout_centerVertical = "true"-->
+				<!--android:text = "@string/the_locker"-->
+				<!--android:textSize = "16sp" />-->
+
+		<!--<com.luna.screenlocker.utils.switchbutton.SwitchButton-->
+				<!--android:id = "@+id/switch_locker"-->
+				<!--style = "@style/MaterialDesignStyle"-->
+				<!--android:layout_alignParentRight = "true" />-->
+	<!--</RelativeLayout >-->
+	<RelativeLayout xmlns:android = "http://schemas.android.com/apk/res/android"
+	                xmlns:ProgressWheel = "http://schemas.android.com/apk/res-auto"
+	                android:layout_width = "fill_parent"
+	                android:layout_height = "fill_parent"
+	                android:orientation = "vertical"
+
+	>
+
+		<TextView android:layout_width = "wrap_content"
+		          android:layout_height = "wrap_content"
+		          android:text = "测试"
+		          android:layout_marginTop = "40dp"
+		          android:textSize = "22dp"
+		          android:id = "@+id/title"
+		          android:textColor = "#fff"
+		          android:layout_centerHorizontal = "true"
+		          android:includeFontPadding = "false" />
+		<TextView android:layout_width = "wrap_content"
+		          android:layout_height = "wrap_content"
+		          android:textColor = "#8affffff"
+		          android:text = "测试"
+		          android:layout_below = "@+id/title"
+		          android:layout_centerHorizontal = "true"
+		          android:includeFontPadding = "false"
+		          android:id = "@+id/prompt"
+		          android:layout_marginTop = "10dp" />
+		<RelativeLayout android:layout_width = "250dp"
+		                android:layout_height = "250dp"
+		                android:layout_centerHorizontal = "true"
+		                android:layout_below = "@+id/prompt"
+		                android:layout_marginTop = "10dp"
+		                android:id = "@+id/layout" >
+
+			<!--<ProgressBar-->
+			<!--android:id="@+id/circularProgressbar"-->
+			<!--android:layout_width="250dp"-->
+			<!--android:layout_height="250dp"-->
+			<!--style="?android:attr/progressBarStyleHorizontal"-->
+			<!--android:indeterminate="false"-->
+			<!--android:progress="75"-->
+			<!--android:max="100"-->
+			<!--android:secondaryProgress="100"-->
+			<!--android:progressDrawable="@drawable/circular" />-->
+
+			<com.zyq.accessibility.view.ProgressWheel
+					android:id = "@+id/progressBarTwo"
+					android:layout_width = "250dp"
+					android:layout_height = "250dp"
+					ProgressWheel:pwTextColor = "#222222"
+					ProgressWheel:pwTextSize = "14sp"
+					ProgressWheel:pwRimColor = "#44000000"
+					ProgressWheel:pwBarLength = "60dp"
+					ProgressWheel:pwBarColor = "#339BB9"
+					ProgressWheel:pwBarWidth = "10dp"
+					ProgressWheel:pwRimWidth = "10dp"
+					ProgressWheel:pwSpinSpeed = "3dp" />
+			<RelativeLayout android:layout_width = "wrap_content"
+			                android:layout_height = "wrap_content"
+			                android:layout_centerInParent = "true"
+			                android:id = "@+id/layout_progress"
+			                android:visibility = "gone"
+
+			>
+				<TextView android:layout_width = "wrap_content"
+				          android:layout_height = "wrap_content"
+				          android:text = "一键设置"
+				          android:textSize = "19sp"
+				          android:textColor = "#ffff"
+				          android:id = "@+id/setting"
+				          android:includeFontPadding = "false" />
+				<TextView android:layout_width = "wrap_content"
+				          android:layout_height = "wrap_content"
+				          android:text = "56"
+				          android:layout_below = "@+id/setting"
+				          android:textSize = "70sp"
+				          android:textColor = "#ffff"
+				          android:layout_marginTop = "-10dp"
+				          android:id = "@+id/progress"
+				          android:includeFontPadding = "false"
+				/>
+			</RelativeLayout >
+			<TextView android:layout_width = "wrap_content"
+			          android:layout_height = "wrap_content"
+			          android:text = "%"
+			          android:textSize = "19sp"
+			          android:layout_toRightOf = "@+id/layout_progress"
+			          android:layout_alignBottom = "@+id/layout_progress"
+			          android:layout_marginBottom = "10dp"
+			          android:textColor = "#fff"
+			          android:includeFontPadding = "false"
+			          android:visibility = "gone"
+			          android:id = "@+id/percent" />
+
+			<TextView android:layout_width = "wrap_content"
+			          android:layout_height = "wrap_content"
+			          android:layout_centerInParent = "true"
+			          android:text = "一键开始"
+			          android:textColor = "#fff"
+			          android:textSize = "30sp"
+			          android:includeFontPadding = "false"
+			          android:id = "@+id/start" />
+		</RelativeLayout >
+
+		<View android:layout_width = "match_parent"
+		      android:layout_height = "1dp"
+		      android:layout_marginLeft = "15dp"
+		      android:layout_marginRight = "15dp"
+		      android:background = "#8affffff"
+		      android:layout_below = "@+id/layout"
+		      android:layout_marginTop = "40dp"
+		      android:id = "@+id/divider" />
+
+		<android.support.v7.widget.RecyclerView
+				android:layout_width = "match_parent"
+				android:layout_height = "match_parent"
+				android:id = "@+id/tasks"
+				android:layout_below = "@+id/divider"
+
+		></android.support.v7.widget.RecyclerView >
+
+
+	</RelativeLayout >
+</LinearLayout >

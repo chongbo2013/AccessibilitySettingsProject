@@ -1,0 +1,13 @@
+<resources >
+	<string name = "app_name" >Accessibility Test</string >
+	<string name = "setting_service_description" >Open it,MigoLocker run perfectly</string >
+	<string name = "setting_service_name" >【设置测试】</string >
+	<string name = "onekey_setting_title" >Initial Settings</string >
+	<string name = "onekey_setting_prompt" >Complete Settings to better use Locker</string >
+	<string name = "onekey_setting" >Setting Now</string >
+	<string name = "onekey_setting_finish" >Setting Complete</string >
+	<string name = "onekey_setting_start" >One Key Setting</string >
+	<string name = "onekey_setting_check" >Checking</string >
+	<string name = "setting_prompt_close_system_clock" >Please turn off the system lock screen as follows</string >
+	<string name = "choose_no_psd_type" >please choose [no password] type</string >
+</resources >
